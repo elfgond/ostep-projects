@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 if ! [[ -x wcat ]]; then
     echo "wcat executable does not exist"
@@ -6,5 +6,3 @@ if ! [[ -x wcat ]]; then
 fi
 
 ../../tester/run-tests.sh $*
-
-

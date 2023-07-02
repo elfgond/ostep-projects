@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /bin/env zsh
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -36,7 +36,7 @@ run_test () {
 	    cat $postfile
 	fi
     fi
-    return 
+    return
 }
 
 print_error_message () {
@@ -180,11 +180,11 @@ for i; do
     esac
 done
 
+echo "make tests-out"
 # need a test directory; must be named "tests-out"
 if [[ ! -d tests-out ]]; then
     mkdir tests-out
 fi
-
 # do a one-time setup step
 if (( $skippre == 0 )); then
     if [[ -f tests/pre ]]; then
